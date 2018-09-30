@@ -62,9 +62,19 @@ class PersonalDataForm extends Form {
 
   doSubmit = async () => {
     const { data } = this.state;
-    await savePerson(data);
-    this.props.onSubmit(data);
-    toast.success("Person with name " + data.firstName + " saved successfully");
+    try {
+      await savePerson(data);
+      this.props.onSubmit(data);
+      toast.success(
+        "Person with name " + data.firstName + " saved successfully"
+      );
+    } catch (ex) {
+      if (ex.response && ex.response.status === 404) {
+        toast.error(
+          "Person with name " + data.firstName + " could not be saved"
+        );
+      }
+    }
   };
 
   componentDidReceiveProps() {

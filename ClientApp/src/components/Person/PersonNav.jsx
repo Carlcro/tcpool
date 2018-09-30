@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import PersonalDataForm from "./PersonalDataForm";
-ç
+
 const PersonNav = ({ selectedPerson, onSubmit }) => {
   return (
     <div>

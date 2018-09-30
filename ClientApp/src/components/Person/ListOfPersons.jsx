@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 
 export default class ListOfPersons extends Component {
   render() {
-    const { persons } = this.props;
+    const { persons, onClick } = this.props;
     return (
       <div>
         <Table className="clickable" striped bordered condensed hover>
@@ -15,7 +15,7 @@ export default class ListOfPersons extends Component {
           </thead>
           <tbody>
             {persons.map(person => (
-              <tr key={person.id} onClick={() => this.props.onClick(person)}>
+              <tr key={person.id} onClick={() => onClick(person)}>
                 <td>{person.firstName}</td>
                 <td>{person.lastName}</td>
               </tr>

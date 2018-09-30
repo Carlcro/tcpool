@@ -39,12 +39,13 @@ export default class Person extends Component {
       lastName: "",
       shortName: "",
       password: "",
-      roleId: 3
+      roleId: 0
     };
     this.setState({ selectedPerson: newPerson });
   };
 
   render() {
+    const { persons, selectedPerson } = this.state;
     return (
       <Grid>
         <Row>
@@ -52,15 +53,12 @@ export default class Person extends Component {
             <Button bsStyle="primary" onClick={this.newPerson}>
               New person
             </Button>
-            <ListOfPersons
-              persons={this.state.persons}
-              onClick={this.handlePersonClick}
-            />
+            <ListOfPersons persons={persons} onClick={this.handlePersonClick} />
           </Col>
           <Col sm={9}>
             <PersonNav
               onSubmit={this.handlePersonSaved}
-              selectedPerson={this.state.selectedPerson}
+              selectedPerson={selectedPerson}
             />
           </Col>
         </Row>
