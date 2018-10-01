@@ -13,7 +13,7 @@ export default class Person extends Component {
       lastName: "",
       shortName: "",
       password: "",
-      roleId: null
+      roleId: 0
     }
   };
 

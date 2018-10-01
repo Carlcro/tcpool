@@ -19,5 +19,7 @@ namespace TimePool.Entities
         public string shortName { get; set; }
         [Required]
         public string password { get; set; }
+        [Required]
+        public int roleId { get; set; }
     }
 }

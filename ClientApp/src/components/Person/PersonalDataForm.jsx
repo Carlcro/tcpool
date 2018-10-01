@@ -56,7 +56,8 @@ class PersonalDataForm extends Form {
       firstName: person.firstName,
       lastName: person.lastName,
       shortName: person.shortName,
-      password: person.password
+      password: person.password,
+      roleId: person.roleId
     };
   }
 

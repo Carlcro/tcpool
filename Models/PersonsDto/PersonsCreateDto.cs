@@ -7,6 +7,7 @@ namespace TimePool.Models.PersonsDto
         public string lastName { get; set; }
         public string shortName { get; set; }
         public string password { get; set; }
+        public int roleId { get; set; }
 
 
     }

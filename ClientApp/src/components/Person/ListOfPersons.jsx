@@ -6,7 +6,7 @@ export default class ListOfPersons extends Component {
     const { persons, onClick } = this.props;
     return (
       <div>
-        <Table className="clickable" striped bordered condensed hover>
+        <Table className="clickable"  bordered condensed hover>
           <thead>
             <tr>
               <th>First Name</th>

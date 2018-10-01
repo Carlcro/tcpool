@@ -22,7 +22,8 @@ namespace TimePool.Controllers
                 firstName = "Carl",
                 lastName = "Cronsioe",
                 shortName = "cc",
-                password = "123"
+                password = "123",
+                roleId = 1
             },
                         new PersonsDto()
             {
@@ -30,7 +31,8 @@ namespace TimePool.Controllers
                 firstName = "Luke",
                 lastName = "Orun",
                 shortName = "LO",
-                password = "123"
+                password = "123",
+                roleId = 2
             },
                         new PersonsDto()
             {
@@ -38,7 +40,8 @@ namespace TimePool.Controllers
                 firstName = "Richard",
                 lastName = "Hentze",
                 shortName = "RH",
-                password = "123"
+                password = "123",
+                roleId = 3
             }
 
         };
@@ -63,7 +66,10 @@ namespace TimePool.Controllers
                     firstName = PersonEntity.firstName,
                     lastName = PersonEntity.lastName,
                     shortName = PersonEntity.shortName,
-                    password = PersonEntity.password
+                    password = PersonEntity.password,
+                    roleId = PersonEntity.roleId
+
+
                 });
             }
 
@@ -86,7 +92,8 @@ namespace TimePool.Controllers
                 firstName = Person.firstName,
                 lastName = Person.lastName,
                 shortName = Person.shortName,
-                password = Person.password
+                password = Person.password,
+                roleId = Person.roleId
             };
             return Ok(result);
         }
@@ -110,7 +117,8 @@ namespace TimePool.Controllers
                 firstName = Person.firstName,
                 lastName = Person.lastName,
                 shortName = Person.shortName,
-                password = Person.password
+                password = Person.password,
+                roleId = Person.roleId
             };
 
             Persons.Add(newPerson);
@@ -127,7 +135,9 @@ namespace TimePool.Controllers
                 firstName = newPerson.firstName,
                 lastName = newPerson.lastName,
                 shortName = newPerson.shortName,
-                password = newPerson.password
+                password = newPerson.password,
+                roleId = newPerson.roleId
+
             };
 
             return Ok(createdPerson);
