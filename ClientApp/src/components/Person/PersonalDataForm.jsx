@@ -14,7 +14,7 @@ class PersonalDataForm extends Form {
       password: "",
       roleId: ""
     },
-    genres: [],
+    roles: [],
     errors: {}
   };
 
@@ -46,8 +46,8 @@ class PersonalDataForm extends Form {
 
   async componentDidMount() {
     const { data } = await getRoles();
-    const genres = [...data];
-    this.setState({ genres });
+    const roles = [...data];
+    this.setState({ roles });
   }
 
   mapToViewModel(person) {
@@ -77,10 +77,6 @@ class PersonalDataForm extends Form {
       }
     }
   };
-
-  componentDidReceiveProps() {
-    this.setState({ data: this.mapToViewModel(this.props.selectedPerson) });
-  }
 
   render() {
     return (
