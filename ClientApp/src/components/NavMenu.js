@@ -16,7 +16,7 @@ export default props => (
       <Nav>
         <LinkContainer to={"/"} exact>
           <NavItem>
-            <i class="fas fa-home" /> Home
+            <i className="fas fa-home" /> Home
           </NavItem>
         </LinkContainer>
         <LinkContainer to={"/personnel"}>
@@ -26,7 +26,7 @@ export default props => (
         </LinkContainer>
         <LinkContainer to={"/workplace"}>
           <NavItem>
-            <i class="fas fa-building" /> Workplace
+            <i className="fas fa-building" /> Workplace
           </NavItem>
         </LinkContainer>
       </Nav>

@@ -3,10 +3,10 @@ import { Route } from "react-router";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Person from "./components/Person/Person";
-import Workplace from "./components/Workplace";
+import Workplace from "./components/Workplace/Workplace";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import 'react-checkbox-tree/lib/react-checkbox-tree.css';
+import "react-checkbox-tree/lib/react-checkbox-tree.css";
 
 export default () => (
   <Layout>
