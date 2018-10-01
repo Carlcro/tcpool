@@ -86,7 +86,7 @@ class PersonalDataForm extends Form {
           {this.renderInput("firstName", "First name")}
           {this.renderInput("lastName", "Last name")}
           {this.renderInput("shortName", "Short Name")}
-          {this.renderSelect("roleId", "Role", this.state.genres)}
+          {this.renderSelect("roleId", "Role", this.state.roles)}
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Save")}
         </form>

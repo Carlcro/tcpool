@@ -32,7 +32,13 @@ export default class Person extends Component {
     this.setState({ persons: listOfPersons });
   };
 
-  newPerson = () => {
+  handlePersonDeleted = person => {
+    let listOfPersons = [...this.state.persons].filter(x => x.id !== person.id);
+    this.setState({ persons: listOfPersons });
+    this.resetForm();
+  }
+
+  resetForm = () => {
     const newPerson = {
       id: 0,
       firstName: "",
@@ -42,7 +48,8 @@ export default class Person extends Component {
       roleId: 0
     };
     this.setState({ selectedPerson: newPerson });
-  };
+
+  }
 
   render() {
     const { persons, selectedPerson } = this.state;
@@ -50,8 +57,11 @@ export default class Person extends Component {
       <Grid>
         <Row>
           <Col sm={3}>
-            <Button bsStyle="primary" onClick={this.newPerson}>
+            <Button bsStyle="primary" onClick={this.resetForm}>
               New person
+            </Button>
+            <Button onClick={() => this.handlePersonDeleted(this.state.selectedPerson)}>
+              Delete person
             </Button>
             <ListOfPersons persons={persons} onClick={this.handlePersonClick} />
           </Col>
