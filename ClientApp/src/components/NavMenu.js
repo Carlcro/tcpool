@@ -29,6 +29,11 @@ export default props => (
             <i className="fas fa-building" /> Workplace
           </NavItem>
         </LinkContainer>
+        <LinkContainer to={"/protected"}>
+          <NavItem>
+            <i className="fas fa-lock"/> Protected page
+          </NavItem>
+        </LinkContainer>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

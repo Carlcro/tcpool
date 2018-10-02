@@ -82,23 +82,3 @@ class Workplace extends React.Component {
 
 export default Workplace;
 
-/*
-      <CheckboxTree
-        nodes={nodes}
-        checked={this.state.checked}
-        expanded={this.state.expanded}
-        onCheck={checked => this.setState({ checked })}
-        onExpand={expanded => this.setState({ expanded })}
-        icons={{
-          check: <span className="far fa-check-square" />,
-          uncheck: <span className="rct-icon rct-icon-uncheck" />,
-          halfCheck: <span className="rct-icon rct-icon-half-check" />,
-          expandClose: <span className="fas fa-angle-right" />,
-          expandOpen: <span className="fas fa-angle-down" />,
-          expandAll: <span className="rct-icon rct-icon-expand-all" />,
-          collapseAll: <span className="rct-icon rct-icon-collapse-all" />,
-          parentClose: <span className="rct-icon rct-icon-parent-close" />,
-          parentOpen: <span className="rct-icon rct-icon-parent-open" />,
-          leaf: <span className="rct-icon rct-icon-leaf" />
-        }}
-      />*/
